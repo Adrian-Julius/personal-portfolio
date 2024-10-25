@@ -483,7 +483,7 @@ function App() {
         >
           {isActive ? (
             <img
-              src="./assets/exit.png"
+              src="./src/assets/exit.png"
               className="w-10 bg-red-200 rounded-full hover:bg-yellow-700 hover:translate-y-[-3px] duration-200"
             />
           ) : (
@@ -514,7 +514,7 @@ function App() {
           >
             <div className="homeContainer relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <motion.img
-                src="./assets/homeProfile.png"
+                src="./src/assets/homeProfile.png"
                 alt="home profile"
                 ref={homeProfile}
                 initial={{ opacity: 0.5, x: -100 }}
@@ -587,7 +587,7 @@ function App() {
 
                   <div className="mt-9 lg:mt-12 hover:translate-y-[-2.5px] ">
                     <a
-                      href="./assets/VILLARUEL_resume.pdf"
+                      href="./src/assets/VILLARUEL_resume.pdf"
                       title="Villaruel_CV"
                       download={"Villaruel_CV"}
                       className="text-white text-[15px] lg:text-2xl p-5 rounded-2xl shadow-xl bg-lime-700 hover:bg-[#375010] z-20"
@@ -606,7 +606,7 @@ function App() {
                       className="mt-[20px] z-10"
                     >
                       <img
-                        src="./assets/arrow.png"
+                        src="./src/assets/arrow.png"
                         alt="arrow up"
                         className="w-[55px] m-auto"
                       />
@@ -625,7 +625,7 @@ function App() {
             <h1 className="text-4xl font-semibold mb-12">ABOUT ME</h1>
             <div className="flex flex-col items-center justify-center gap-y-7 sm:gap-y-16 text-2xl">
               <motion.img
-                src="./assets/aboutmeProfile.jpg"
+                src="./src/assets/aboutmeProfile.jpg"
                 alt="About me profile"
                 ref={aboutProfile}
                 initial={{ opacity: 0, y: 100 }}
@@ -967,7 +967,7 @@ function App() {
                 {/* VS Code */}
                 <div className="vsCodeContainer xl:px-5">
                   <img
-                    src="./assets/vscode.png"
+                    src="./src/assets/vscode.png"
                     alt="vscode"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
