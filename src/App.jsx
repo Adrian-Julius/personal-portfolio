@@ -483,7 +483,7 @@ function App() {
         >
           {isActive ? (
             <img
-              src="./public/exit.png"
+              src="./assets/exit.png"
               className="w-10 bg-red-200 rounded-full hover:bg-yellow-700 hover:translate-y-[-3px] duration-200"
             />
           ) : (
@@ -514,7 +514,7 @@ function App() {
           >
             <div className="homeContainer relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <motion.img
-                src="./public/homeProfile.png"
+                src="./assets/homeProfile.png"
                 alt="home profile"
                 ref={homeProfile}
                 initial={{ opacity: 0.5, x: -100 }}
@@ -587,7 +587,7 @@ function App() {
 
                   <div className="mt-9 lg:mt-12 hover:translate-y-[-2.5px] ">
                     <a
-                      href="./public/VILLARUEL_resume.pdf"
+                      href="./assets/VILLARUEL_resume.pdf"
                       title="Villaruel_CV"
                       download={"Villaruel_CV"}
                       className="text-white text-[15px] lg:text-2xl p-5 rounded-2xl shadow-xl bg-lime-700 hover:bg-[#375010] z-20"
@@ -606,7 +606,7 @@ function App() {
                       className="mt-[20px] z-10"
                     >
                       <img
-                        src="./public/arrow.png"
+                        src="./assets/arrow.png"
                         alt="arrow up"
                         className="w-[55px] m-auto"
                       />
@@ -625,7 +625,7 @@ function App() {
             <h1 className="text-4xl font-semibold mb-12">ABOUT ME</h1>
             <div className="flex flex-col items-center justify-center gap-y-7 sm:gap-y-16 text-2xl">
               <motion.img
-                src="./public/aboutmeProfile.jpg"
+                src="./assets/aboutmeProfile.jpg"
                 alt="About me profile"
                 ref={aboutProfile}
                 initial={{ opacity: 0, y: 100 }}
@@ -676,7 +676,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/html.png"
+                    src="./src/assets/html.png"
                     alt="html"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -700,7 +700,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/css.png"
+                    src="./src/assets/css.png"
                     alt="css"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -724,7 +724,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/javascript.png"
+                    src="./src/assets/javascript.png"
                     alt="javascript"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -749,7 +749,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <motion.img
-                    src="./src/images/react.png"
+                    src="./src/assets/react.png"
                     alt="react"
                     animate={{ rotate: 360 }}
                     transition={{
@@ -780,7 +780,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/sass.png"
+                    src="./src/assets/sass.png"
                     alt="sass"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -804,7 +804,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/tailwind.png"
+                    src="./src/assets/tailwind.png"
                     alt="tailwind"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -829,7 +829,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/python.png"
+                    src="./src/assets/python.png"
                     alt="python"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -854,7 +854,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/bootstrap.png"
+                    src="./src/assets/bootstrap.png"
                     alt="bootstrap"
                     className="w-[80px] md:w-[100px] m-auto"
                   />
@@ -879,7 +879,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/java.png"
+                    src="./src/assets/java.png"
                     alt="java"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -903,7 +903,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/git.png"
+                    src="./src/assets/git.png"
                     alt="git"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -927,7 +927,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/images/mysql.png"
+                    src="./src/assets/mysql.png"
                     alt="mysql"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -947,7 +947,7 @@ function App() {
                 {/* Vite */}
                 <div className="viteContainer xl:px-5">
                   <img
-                    src="./src/images/vite.png"
+                    src="./src/assets/vite.png"
                     alt="vite"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -957,7 +957,7 @@ function App() {
                 {/* npm */}
                 <div className="npmContainer xl:px-5">
                   <img
-                    src="./src/images/npm.png"
+                    src="./src/assets/npm.png"
                     alt="npm"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -967,7 +967,7 @@ function App() {
                 {/* VS Code */}
                 <div className="vsCodeContainer xl:px-5">
                   <img
-                    src="./src/images/vscode.png"
+                    src="./assets/vscode.png"
                     alt="vscode"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
