@@ -2,9 +2,13 @@ import "./App.css";
 import aboutmeprofile from "./assets/aboutmeProfile.jpg";
 import arrow from "./assets/arrow.png";
 import bootstrap from "./assets/bootstrap.png";
+import calculator from "./assets/calculator.jpg";
 import css from "./assets/css.png";
+import diceRoller from "./assets/diceRoller.jpg";
+import ecommerce from "./assets/ecommerce.jpg";
 import exit from "./assets/exit.png";
 import git from "./assets/git.png";
+import guessNumber from "./assets/guessNumber.png";
 import homeProfilee from "./assets/homeProfile.png";
 import html from "./assets/html.png";
 
@@ -12,13 +16,15 @@ import java from "./assets/java.png";
 import javascript from "./assets/javascript.png";
 import mysql from "./assets/mysql.png";
 import npm from "./assets/npm.png";
-
 import python from "./assets/python.png";
 import react from "./assets/react.png";
+import rockPaperScissor from "./assets/rockPaperScissor.webp";
 import sass from "./assets/sass.png";
 import tailwind from "./assets/tailwind.png";
+import tempConversion from "./assets/tempConversion.webp";
 import vite from "./assets/vite.png";
 import vscode from "./assets/vscode.png";
+import weatherApp from "./assets/weatherApp.webp";
 
 import villaruelResume from "./assets/VILLARUEL_resume.pdf";
 
@@ -275,7 +281,7 @@ function App() {
     {
       id: 1,
       name: "E-commerce website",
-      image: "./public/ecommerce.jpg",
+      image: ecommerce,
       url: "https://adrian-julius.github.io/ecommerce-website/",
       description:
         "A simple, responsive e-commerce website that enables users to browse products and add items to their cart. It also features various product categories.",
@@ -283,7 +289,7 @@ function App() {
     {
       id: 2,
       name: "Weather App",
-      image: "./public/weatherApp.webp",
+      image: weatherApp,
       url: "https://adrian-julius.github.io/Weather-App/",
       description:
         "A simple and user-friendly weather app that provides real-time weather updates for any city. Just input a city name to get accurate weather data, including temperature, humidity, and more.",
@@ -292,7 +298,7 @@ function App() {
     {
       id: 3,
       name: "Basic Calculator",
-      image: "./public/calculator.jpg",
+      image: calculator,
       url: "https://adrian-julius.github.io/Basic-Calculator/",
       description:
         "A responsive, simple calculator App that allows users to solve basic mathematical equations such as addition, subtraction, multiplication, and division.",
@@ -300,7 +306,7 @@ function App() {
     {
       id: 4,
       name: "Rock Paper Scissor",
-      image: "./public/rockPaperScissor.webp",
+      image: rockPaperScissor,
       url: "https://adrian-julius.github.io/Rock-Paper-Scissors-Game-/",
       description:
         "Rock-Paper-Scissors game where users can play against another player or the computer. It has a simple interface and tracks scores for an enjoyable experience.",
@@ -308,7 +314,7 @@ function App() {
     {
       id: 5,
       name: "Temperature Conversion",
-      image: "./public/tempConversion.webp",
+      image: tempConversion,
       url: "https://adrian-julius.github.io/Temperature-Conversion/",
       description:
         "A Temperature Conversion App that enables users to convert between various temperature scales, including Celsius, Fahrenheit, Kelvin, Rankine, and Réaumur.",
@@ -316,7 +322,7 @@ function App() {
     {
       id: 6,
       name: "Number Guessing game",
-      image: "./public/guessNumber.png",
+      image: guessNumber,
       url: "https://adrian-julius.github.io/Guess-The-Number/",
       description:
         "Number Guessing Game that lets users set their own range. Players guess a random number, receiving hints on whether their guesses are too high or too low.",
@@ -324,7 +330,7 @@ function App() {
     {
       id: 7,
       name: "Dice Roller",
-      image: "./public/diceRoller.jpg",
+      image: diceRoller,
       url: "https://adrian-julius.github.io/Dice-Roller-Game/",
       description:
         "The Dice Roller project is a game that allows users to generate values for dice, ranging from 1 to 6, based on the number of dice they input or specify.",
@@ -610,8 +616,8 @@ function App() {
                   <div className="mt-9 lg:mt-12 hover:translate-y-[-2.5px] ">
                     <a
                       href={villaruelResume}
-                      title="Villaruel_resume"
-                      download={"Villaruel_resume"}
+                      title="Villaruel_CV"
+                      download={"Villaruel_CV"}
                       className="text-white text-[15px] lg:text-2xl p-5 rounded-2xl shadow-xl bg-lime-700 hover:bg-[#375010] z-20"
                     >
                       Download CV
