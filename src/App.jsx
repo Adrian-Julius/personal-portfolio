@@ -1,5 +1,26 @@
 import "./App.css";
 import aboutmeprofile from "./assets/aboutmeProfile.jpg";
+import arrow from "./assets/arrow.png";
+import bootstrap from "./assets/bootstrap.png";
+import css from "./assets/css.png";
+import exit from "./assets/exit.png";
+import git from "./assets/git.png";
+import homeProfilee from "./assets/homeProfile.png";
+import html from "./assets/html.png";
+
+import java from "./assets/java.png";
+import javascript from "./assets/javascript.png";
+import mysql from "./assets/mysql.png";
+import npm from "./assets/npm.png";
+
+import python from "./assets/python.png";
+import react from "./assets/react.png";
+import sass from "./assets/sass.png";
+import tailwind from "./assets/tailwind.png";
+import vite from "./assets/vite.png";
+import vscode from "./assets/vscode.png";
+
+import villaruelResume from "./assets/VILLARUEL_resume.pdf";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -254,7 +275,7 @@ function App() {
     {
       id: 1,
       name: "E-commerce website",
-      image: "./src/assets/ecommerce.jpg",
+      image: "./public/ecommerce.jpg",
       url: "https://adrian-julius.github.io/ecommerce-website/",
       description:
         "A simple, responsive e-commerce website that enables users to browse products and add items to their cart. It also features various product categories.",
@@ -262,7 +283,7 @@ function App() {
     {
       id: 2,
       name: "Weather App",
-      image: "./src/assets/weatherApp.webp",
+      image: "./public/weatherApp.webp",
       url: "https://adrian-julius.github.io/Weather-App/",
       description:
         "A simple and user-friendly weather app that provides real-time weather updates for any city. Just input a city name to get accurate weather data, including temperature, humidity, and more.",
@@ -271,7 +292,7 @@ function App() {
     {
       id: 3,
       name: "Basic Calculator",
-      image: "./src/assets/calculator.jpg",
+      image: "./public/calculator.jpg",
       url: "https://adrian-julius.github.io/Basic-Calculator/",
       description:
         "A responsive, simple calculator App that allows users to solve basic mathematical equations such as addition, subtraction, multiplication, and division.",
@@ -279,7 +300,7 @@ function App() {
     {
       id: 4,
       name: "Rock Paper Scissor",
-      image: "./src/assets/rockPaperScissor.webp",
+      image: "./public/rockPaperScissor.webp",
       url: "https://adrian-julius.github.io/Rock-Paper-Scissors-Game-/",
       description:
         "Rock-Paper-Scissors game where users can play against another player or the computer. It has a simple interface and tracks scores for an enjoyable experience.",
@@ -287,7 +308,7 @@ function App() {
     {
       id: 5,
       name: "Temperature Conversion",
-      image: "./src/assets/tempConversion.webp",
+      image: "./public/tempConversion.webp",
       url: "https://adrian-julius.github.io/Temperature-Conversion/",
       description:
         "A Temperature Conversion App that enables users to convert between various temperature scales, including Celsius, Fahrenheit, Kelvin, Rankine, and Réaumur.",
@@ -295,7 +316,7 @@ function App() {
     {
       id: 6,
       name: "Number Guessing game",
-      image: "./src/assets/guessNumber.png",
+      image: "./public/guessNumber.png",
       url: "https://adrian-julius.github.io/Guess-The-Number/",
       description:
         "Number Guessing Game that lets users set their own range. Players guess a random number, receiving hints on whether their guesses are too high or too low.",
@@ -303,7 +324,7 @@ function App() {
     {
       id: 7,
       name: "Dice Roller",
-      image: "./src/assets/diceRoller.jpg",
+      image: "./public/diceRoller.jpg",
       url: "https://adrian-julius.github.io/Dice-Roller-Game/",
       description:
         "The Dice Roller project is a game that allows users to generate values for dice, ranging from 1 to 6, based on the number of dice they input or specify.",
@@ -484,7 +505,7 @@ function App() {
         >
           {isActive ? (
             <img
-              src="./src/assets/exit.png"
+              src={exit}
               className="w-10 bg-red-200 rounded-full hover:bg-yellow-700 hover:translate-y-[-3px] duration-200"
             />
           ) : (
@@ -515,7 +536,7 @@ function App() {
           >
             <div className="homeContainer relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <motion.img
-                src="./assets/homeProfile.png"
+                src={homeProfilee}
                 alt="home profile"
                 ref={homeProfile}
                 initial={{ opacity: 0.5, x: -100 }}
@@ -588,9 +609,9 @@ function App() {
 
                   <div className="mt-9 lg:mt-12 hover:translate-y-[-2.5px] ">
                     <a
-                      href="./src/assets/VILLARUEL_resume.pdf"
-                      title="Villaruel_CV"
-                      download={"Villaruel_CV"}
+                      href={villaruelResume}
+                      title="Villaruel_resume"
+                      download={"Villaruel_resume"}
                       className="text-white text-[15px] lg:text-2xl p-5 rounded-2xl shadow-xl bg-lime-700 hover:bg-[#375010] z-20"
                     >
                       Download CV
@@ -607,7 +628,7 @@ function App() {
                       className="mt-[20px] z-10"
                     >
                       <img
-                        src="./src/assets/arrow.png"
+                        src={arrow}
                         alt="arrow up"
                         className="w-[55px] m-auto"
                       />
@@ -677,7 +698,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/html.png"
+                    src={html}
                     alt="html"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -701,7 +722,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/css.png"
+                    src={css}
                     alt="css"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -725,7 +746,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/javascript.png"
+                    src={javascript}
                     alt="javascript"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -750,7 +771,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <motion.img
-                    src="./src/assets/react.png"
+                    src={react}
                     alt="react"
                     animate={{ rotate: 360 }}
                     transition={{
@@ -781,7 +802,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/sass.png"
+                    src={sass}
                     alt="sass"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -805,7 +826,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/tailwind.png"
+                    src={tailwind}
                     alt="tailwind"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -830,7 +851,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/python.png"
+                    src={python}
                     alt="python"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -855,7 +876,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/bootstrap.png"
+                    src={bootstrap}
                     alt="bootstrap"
                     className="w-[80px] md:w-[100px] m-auto"
                   />
@@ -880,7 +901,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/java.png"
+                    src={java}
                     alt="java"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -904,7 +925,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/git.png"
+                    src={git}
                     alt="git"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -928,7 +949,7 @@ function App() {
                   } xl:px-5`}
                 >
                   <img
-                    src="./src/assets/mysql.png"
+                    src={mysql}
                     alt="mysql"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -948,7 +969,7 @@ function App() {
                 {/* Vite */}
                 <div className="viteContainer xl:px-5">
                   <img
-                    src="./src/assets/vite.png"
+                    src={vite}
                     alt="vite"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -958,7 +979,7 @@ function App() {
                 {/* npm */}
                 <div className="npmContainer xl:px-5">
                   <img
-                    src="./src/assets/npm.png"
+                    src={npm}
                     alt="npm"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
@@ -968,7 +989,7 @@ function App() {
                 {/* VS Code */}
                 <div className="vsCodeContainer xl:px-5">
                   <img
-                    src="./src/assets/vscode.png"
+                    src={vscode}
                     alt="vscode"
                     className="w-[75px] md:w-[100px] m-auto"
                   />
