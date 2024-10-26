@@ -346,7 +346,7 @@ function App() {
       key={index}
       className={`project h-14 overflow-hidden hover:h-full flex flex-col justify-between text-center gap-5 bg-gradient-to-r from-slate-200 to-slate-300 lg:px-6 py-4 duration-700 rounded-md  shadow-xl ${
         index === imageIndex
-          ? "scale-[1.03] bg-gradient-to-r from-green-300 to-slate-200 "
+          ? "scale-[1.03] bg-gradient-to-r from-green-300 to-slate-200"
           : "scale-100"
       }`}
       onClick={() => {
