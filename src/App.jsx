@@ -57,100 +57,10 @@ function App() {
   // Splash --------------------------------
   const [splash, setSplash] = useState(true);
 
-  // const splashAnimation = (
-  //   <div className="w-screen h-screen bg-gradient-to-r from-blue-800 to-green-800 flex justify-center items-center text-white">
-  //     <motion.div
-  //       initial={{ opacity: 0 }}
-  //       animate={{ opacity: 1 }}
-  //       transition={{
-  //         delay: 5.5,
-  //         duration: 1.5,
-  //         // repeat: 1,
-  //         // repeatType: "reverse",
-  //         // ease: "linear",
-  //       }}
-  //       className="absolute w-screen h-screen bg-gradient-to-r from-yellow-300 to-orange-300 z-50"
-  //     ></motion.div>
-
-  //     <motion.samp
-  //       initial={{ y: -500 }}
-  //       animate={{ y: 0 }}
-  //       transition={{
-  //         delay: 0.2,
-  //         duration: 1.2,
-  //         // repeat: 1,
-  //         // repeatType: "reverse",
-  //         // ease: "linear",
-  //         type: "spring",
-  //         stiffness: 100,
-  //         damping: 5,
-  //       }}
-  //       className="text-[11em] md:text-[13em] xl-[14em]"
-  //     >
-  //       A
-  //     </motion.samp>
-
-  //     <motion.samp
-  //       initial={{ y: -500 }}
-  //       animate={{ y: 0 }}
-  //       transition={{
-  //         delay: 1.2,
-  //         duration: 1.2,
-  //         // repeat: 1,
-  //         // repeatType: "reverse",
-  //         // ease: "linear",
-  //         type: "spring",
-  //         stiffness: 100,
-  //         damping: 5,
-  //       }}
-  //       className="text-[11em] md:text-[13em] xl-[14em]"
-  //     >
-  //       J
-
-  //     </motion.samp>
-
-  //     <motion.samp
-  //       initial={{ y: -500 }}
-  //       animate={{ y: 0 }}
-  //       transition={{
-  //         delay: 2.4,
-  //         duration: 1.2,
-  //         // repeat: Infinity,
-  //         // repeatType: "reverse",
-  //         // ease: "linear",
-  //         type: "spring",
-  //         stiffness: 100,
-  //         damping: 5,
-  //       }}
-  //       className="text-[11em] md:text-[13em] xl-[14em]"
-  //     >
-  //       V
-  //     </motion.samp>
-
-  //     <motion.samp
-  //       initial={{ y: -500 }}
-  //       animate={{ y: 0 }}
-  //       transition={{
-  //         delay: 3.5,
-  //         duration: 1.5,
-  //         // repeat: Infinity,
-  //         // repeatType: "reverse",
-  //         // ease: "linear",
-  //         type: "spring",
-  //         stiffness: 100,
-  //         damping: 5,
-  //       }}
-  //       className=" text-[1.7em] md:text-[2.6em] xl:text-[3.5em] absolute z-30 text-yellow-400 font-semibold"
-  //     >
-  //       𝓨𝓸𝓾𝓻 𝓕𝓻𝓸𝓷𝓽𝓮𝓷𝓭 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓻
-  //     </motion.samp>
-  //   </div>
-  // );
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setSplash(false);
-    }, 7000);
+    }, 4500);
   }, []);
 
   // Navbar --------------------------------
@@ -215,27 +125,33 @@ function App() {
             ? "text-white font-semibold"
             : `${
                 isActive ? "text-slate-300 shadow-2xl my-3" : "text-slate-600"
-              } hover:text-slate-200 hover:bg-slate-800 duration-700`
-        } text-2xl px-5 py-3 rounded-xl shadow-lg transition-colors relative`}
+              } hover:text-orange-700 hover:font-semibold duration-200`
+        } text-2xl px-5 py-3 rounded-sm shadow-sm transition-colors relative`}
       >
         <span className="relative z-10">{tab.sectionName}</span>
         {selected === tab.sectionName && (
+          // <motion.span
+          //   layoutId="pill-tab"
+          //   transition={{
+          //     type: "spring",
+          //     stiffness: 100,
+          //     damping: 12,
+          //     duration: 0.5,
+          //   }}
           <motion.span
             layoutId="pill-tab"
             transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 10,
-              duration: 0.5,
+              type: "tween",
+              duration: 0.2,
             }}
-            className="absolute px-5 py-3 rounded-xl inset-0 z-0 bg-gradient-to-r from-orange-600 to-orange-800"
+            className="absolute px-5 py-3 rounded-sm inset-0 z-0 bg-gradient-to-r from-orange-600 to-orange-800"
           ></motion.span>
         )}
       </button>
     </li>
   ));
 
-  // CHANGING isActive to false when screen size is large(lg)
+  // Changing isActive to false when screen size is large(lg)
   useEffect(() => {
     function resizing() {
       const largeScreen = window.matchMedia("(min-width: 1024px)");
@@ -275,6 +191,13 @@ function App() {
         }
       );
   };
+
+  // SKILLS -----------------------------
+// const skillsInfo =[
+//   {}, {}, {}, {}
+// ]
+
+
 
   // Projects -----------------------------
   const projectsInfo = [
@@ -344,36 +267,36 @@ function App() {
   const myProjects = projectsInfo.map((project, index) => (
     <div
       key={index}
-      className={`project h-14 overflow-hidden hover:h-full flex flex-col justify-between text-center gap-5 bg-gradient-to-r from-slate-200 to-slate-300 lg:px-6 py-4 duration-700 rounded-md  shadow-xl ${
+      className={`project ${
         index === imageIndex
-          ? "scale-[1.03] bg-gradient-to-r from-green-300 to-slate-200"
-          : "scale-100"
-      }`}
+          ? "scale-[1.01] bg-gradient-to-r from-slate-200 to-slate-400"
+          : "scale-100 bg-gradient-to-r from-slate-200 to-slate-100"
+      } overflow-hidden h-full flex flex-col justify-between text-center gap-5  lg:px-6 py-4 rounded-sm  shadow-xl duration-700 `}
       onClick={() => {
         setImageIndex(index);
         clearInterval(intervalId.current);
       }}
     >
-      <div className="description h-full flex flex-col justify-center items-center gap-y-2 absolute opacity-0 px-4 pt-7 lg:px-7 text-[13px] lg:text-[15px] text-green-600 ">
+      <div className="description h-full flex flex-col justify-center items-center gap-y-2 absolute opacity-0 px-4 lg:px-7 text-[13px] lg:text-[15px] text-green-600 ">
         {project.description}
         <a
           href={project.url}
           target="_blank"
           title={`Visit ${project.name}`}
-          className="inline-block text-white text-[10px] sm:text-[1em] py-3 px-6 bg-gradient-to-r from-blue-500 to-cyan-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-500  rounded-3xl shadow-2xl z-20"
+          className="inline-block text-white text-[12px] sm:text-[1em] py-3 px-6 bg-gradient-to-r from-blue-500 to-cyan-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-cyan-500  rounded-3xl shadow-2xl z-20"
         >
           VISIT
         </a>
       </div>
       <div>
-        <div className=" projectName lg:text-2xl text-slate-600 font-semibold px-2 mb-4">
+        <div className=" projectName text-lg lg:text-2xl text-slate-600 font-semibold px-2 mb-4">
           {project.name}
         </div>
         <img
           src={project.image}
           alt={project.name}
           id={project.id}
-          className="projectImg w-[200px] lg:w-[250px] flex-1 object-contain mx-auto"
+          className="projectImg w-[180px] lg:w-[200px] flex-1 object-contain mx-auto"
         />
       </div>
     </div>
@@ -422,8 +345,8 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            delay: 5.5,
-            duration: 1.5,
+            delay: 3.5,
+            duration: 1,
             // repeat: 1,
             // repeatType: "reverse",
             // ease: "linear",
@@ -435,14 +358,14 @@ function App() {
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{
-            delay: 0.2,
-            duration: 1.2,
+            delay: 0.1,
+            duration: 0.6,
             // repeat: 1,
             // repeatType: "reverse",
             // ease: "linear",
             type: "spring",
             stiffness: 100,
-            damping: 5,
+            damping: 8,
           }}
           className="text-[11em] md:text-[13em] xl-[14em]"
         >
@@ -453,14 +376,14 @@ function App() {
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{
-            delay: 1.2,
-            duration: 1.2,
+            delay: 0.6,
+            duration: 0.6,
             // repeat: 1,
             // repeatType: "reverse",
             // ease: "linear",
             type: "spring",
             stiffness: 100,
-            damping: 5,
+            damping: 8,
           }}
           className="text-[11em] md:text-[13em] xl-[14em]"
         >
@@ -471,14 +394,14 @@ function App() {
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{
-            delay: 2.4,
-            duration: 1.2,
+            delay: 1.2,
+            duration: 0.6,
             // repeat: Infinity,
             // repeatType: "reverse",
             // ease: "linear",
             type: "spring",
             stiffness: 100,
-            damping: 5,
+            damping: 8,
           }}
           className="text-[11em] md:text-[13em] xl-[14em]"
         >
@@ -489,22 +412,26 @@ function App() {
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{
-            delay: 3.5,
-            duration: 1.5,
+            delay: 2,
+            duration: 0.6,
             // repeat: Infinity,
             // repeatType: "reverse",
             // ease: "linear",
             type: "spring",
             stiffness: 100,
-            damping: 5,
+            damping: 8,
           }}
-          className=" text-[1.7em] md:text-[2.6em] xl:text-[3.5em] absolute z-30 text-yellow-400 font-semibold"
+          className=" text-[1.8em] md:text-[2.6em] xl:text-[3.5em] absolute z-30 text-yellow-400 font-semibold"
         >
           𝓨𝓸𝓾𝓻 𝓕𝓻𝓸𝓷𝓽𝓮𝓷𝓭 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓻
         </motion.samp>
       </div>
 
-      <div className={`mainContainer ${splash ? "hidden" : "block"}`}>
+      <div
+        className={`mainContainer ${
+          splash ? "hidden" : "block"
+        } bg-slate-900 text-white`}
+      >
         <button
           onClick={showingNav}
           className="inline-block fixed top-5 left-3 lg:hidden z-50"
@@ -558,13 +485,13 @@ function App() {
                 transition={{ duration: 1 }}
                 className="place-self-center"
               >
-                <div className="text-[15px] sm:text-[18px] md:text-xl  sm:px-5 mb-8 font-semibold">
+                <div className="text-[15px] sm:text-[18px] md:text-xl  sm:px-5 mb-7 font-semibold">
                   {" "}
-                  <span className="hidden lg:inline-block lg:text-5xl mb-4 text-green-500">
+                  <span className="hidden lg:inline-block lg:text-5xl mb-4 text-orange-500">
                     <span>HELLO,</span>
                   </span>
                   <br />I am{" "}
-                  <span className="md:text-[1.3em] text-green-500">
+                  <span className="md:text-[1.3em] text-orange-500">
                     Adrian Julius Villaruel,{" "}
                   </span>
                   a Computer Science graduate with a focus on front-end
@@ -578,12 +505,12 @@ function App() {
                       href="https://www.linkedin.com/in/adrianvillaruel/"
                       target="_blank"
                       title="LinkedIn"
-                      className="hover:translate-y-[-2.5px] duration-200"
+                      className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
                     >
                       <FaLinkedin
                         size={""}
                         color="0A66C2"
-                        className="size-10 lg:size-14"
+                        className="size-10 lg:size-12"
                       />
                     </a>
 
@@ -591,24 +518,24 @@ function App() {
                       href="https://github.com/Adrian-Julius"
                       target="_blank"
                       title="Github"
-                      className="hover:translate-y-[-2.5px] duration-200"
+                      className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
                     >
                       <FaGithub
                         size={""}
                         color="#181717"
-                        className="size-10 lg:size-14"
+                        className="size-10 lg:size-12"
                       />
                     </a>
                     <a
                       href="https://www.facebook.com/adrianjulius.villaruel"
                       target="_blank"
                       title="Facebook"
-                      className="hover:translate-y-[-2.5px] duration-200"
+                      className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
                     >
                       <FaFacebook
                         size={""}
                         color="blue"
-                        className="size-10 lg:size-14"
+                        className="size-10 lg:size-12"
                       />
                     </a>
                   </div>
@@ -669,16 +596,16 @@ function App() {
                 transition={{ duration: 0.7 }}
                 className="aboutText text-[14px] sm:text-[15px] md:text-xl sm:text-center leading-6 lg:px-28"
               >
-                "Hi, I’m Adrian Julius Villaruel, a web developer specializing
-                in front-end development. I completed my BS Computer Science
-                degree at the Polytechnic University of the Philippines, where I
-                gained a strong foundation in building dynamic, user-friendly
-                websites and applications. My expertise includes HTML5, CSS3,
-                JavaScript, Tailwind CSS, Sass, React, and Next.js. I'm
-                passionate about creating responsive, visually engaging web
-                experiences and continually learning the latest technologies.
-                Outside of coding, I enjoy exploring new design concepts and
-                working on personal projects."
+                I’m Adrian Julius Villaruel, a web developer specializing in
+                front-end development. I completed my BS Computer Science degree
+                at the Polytechnic University of the Philippines, where I gained
+                a strong foundation in building dynamic, user-friendly websites
+                and applications. My expertise includes HTML5, CSS3, JavaScript,
+                Tailwind CSS, Sass, React, and Next.js. I'm passionate about
+                creating responsive, visually engaging web experiences and
+                continually learning the latest technologies. Outside of coding,
+                I enjoy exploring new design concepts and working on personal
+                projects.
               </motion.div>
             </div>
           </section>
@@ -695,7 +622,7 @@ function App() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView5 ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.7 }}
-                className="technicalSkills grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-10 text-center lg:px-28"
+                className="technicalSkills grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-5 md:gap-x-2 text-center lg:px-28"
               >
                 {/* HTML5 */}
                 <div
@@ -703,12 +630,8 @@ function App() {
                     isInView5 ? `containers95` : `invisible`
                   } xl:px-5`}
                 >
-                  <img
-                    src={html}
-                    alt="html"
-                    className="w-[75px] md:w-[100px] m-auto"
-                  />
-                  <h3 className="text-[12px] sm:text-[14px] font-semibold">
+                  <img src={html} alt="html" className="w-[75px] md:w-[70px]" />
+                  <h3 className="text-[12px] sm:text-[14px] font-semibold text-left pl-4">
                     HTML5
                   </h3>
                   <div>
@@ -1011,7 +934,7 @@ function App() {
             className="min-h-[90vh] pt-7 lg:pt-[15vh] px-8 sm:px-24 md:px-16 mb-16 lg:mb-8 "
           >
             <h1 className="text-4xl font-semibold mb-12">PROJECTS</h1>
-            <div className="projectContainer flex flex-col md:grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8  justify-center">
+            <div className="projectContainer flex flex-col md:grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-x-2 lg:gap-y-4  justify-center">
               {myProjects}
             </div>
           </section>
@@ -1025,7 +948,7 @@ function App() {
               EXPERIENCE / JOURNEY
             </h1>
 
-            <div className="timelineContainer relative">
+            <div className="timelineContainer relative text-slate-700">
               <div className="timeline hidden xl:block left-[50%] top-[12%] translate-x-[-50%] absolute w-1 h-3/4 bg-green-600"></div>
 
               <div className="experienceContainer relative flex flex-col justify-center items-center gap-y-6">
@@ -1051,7 +974,7 @@ function App() {
 
                 <div className="rightContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
                   <div className="absolute top-[-20%] right-[44%] xl:top-[30%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
-                    <FaCode size={"40px"} color="black" />
+                    <FaCode size={"40px"} color="orange" />
                   </div>
 
                   <div className="content">
@@ -1124,7 +1047,7 @@ function App() {
                 className="flex items-center px-5 sm:px-10  sm:text-lg lg:text-2xl"
               >
                 <div>
-                  <span className="inline-block text-[1.5em] sm:text-3xl lg:text-4xl text-green-500 mb-3 font-semibold">
+                  <span className="inline-block text-[1.5em] sm:text-3xl lg:text-4xl text-orange-600 mb-3 font-semibold">
                     LET'S TALK
                   </span>
                   <br />
@@ -1171,7 +1094,7 @@ function App() {
                     <input
                       type="submit"
                       value="Send"
-                      className="px-6 py-3 bg-slate-300 mt-5 rounded-xl shadow-xl cursor-pointer hover:bg-slate-500 hover:text-white hover:translate-y-[-2.5px] duration-200"
+                      className="px-6 py-3 mt-5 rounded-xl shadow-xl cursor-pointer bg-orange-700 hover:bg-orange-500 hover:translate-y-[-2.5px] duration-200"
                     />
                   </div>
                 </form>
@@ -1181,9 +1104,9 @@ function App() {
         </div>
 
         {/* FOOTER */}
-        <footer className=" flex flex-col xl:justify-center xl:items-center gap-x-10 gap-y-1 p-10 mt-10 bg-slate-300">
+        <footer className=" flex flex-col xl:justify-center xl:items-center gap-x-10 gap-y-1 p-10 mt-10 bg-slate-950 text-white">
           <address className="flex flex-col xl:flex-row gap-x-10 gap-y-3 text-left text-[14px] sm:text-[1.1em] mb-5">
-            <div className="flex gap-x-3 ">
+            <div className="flex gap-x-2 ">
               <FaPhoneAlt
                 size={""}
                 className="flex-shrink-0 size-5 lg:size-6"
@@ -1216,12 +1139,12 @@ function App() {
             </div>
           </address>
 
-          <div className="flex gap-x-3 lg:gap-x-5 xl:justify-center xl:items-center">
+          <div className="flex gap-x-3 lg:gap-x-3 xl:justify-center xl:items-center">
             <a
               href="https://www.linkedin.com/in/adrianvillaruel/"
               target="_blank"
               title="LinkedIn"
-              className="hover:translate-y-[-2.5px] duration-200"
+              className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
             >
               <FaLinkedin
                 size={""}
@@ -1234,7 +1157,7 @@ function App() {
               href="https://github.com/Adrian-Julius"
               target="_blank"
               title="Github"
-              className="hover:translate-y-[-2.5px] duration-200"
+              className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
             >
               <FaGithub
                 size={""}
@@ -1246,7 +1169,7 @@ function App() {
               href="https://www.facebook.com/adrianjulius.villaruel"
               target="_blank"
               title="Facebook"
-              className="hover:translate-y-[-2.5px] duration-200"
+              className="hover:translate-y-[-2.5px] duration-200 bg-gray-100 rounded-md"
             >
               <FaFacebook
                 size={""}
@@ -1258,7 +1181,7 @@ function App() {
               href="https://www.instagram.com/adrianjuliusvillaruel/"
               target="_blank"
               title="Instagram"
-              className="hover:translate-y-[-2.5px] duration-200"
+              className="hover:translate-y-[-2.5px] duration-200 bg-white rounded-md"
             >
               <FaInstagramSquare
                 size={""}
