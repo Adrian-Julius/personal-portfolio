@@ -225,7 +225,7 @@ function App() {
             transition={{
               type: "spring",
               stiffness: 100,
-              damping: 8,
+              damping: 10,
               duration: 0.5,
             }}
             className="absolute px-5 py-3 rounded-xl inset-0 z-0 bg-gradient-to-r from-orange-600 to-orange-800"
