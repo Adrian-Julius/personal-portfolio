@@ -515,7 +515,7 @@ function App() {
           >
             <div className="homeContainer relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <motion.img
-                src="./src/assets/homeProfile.png"
+                src="./assets/homeProfile.png"
                 alt="home profile"
                 ref={homeProfile}
                 initial={{ opacity: 0.5, x: -100 }}
