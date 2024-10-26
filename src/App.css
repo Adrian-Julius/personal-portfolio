@@ -39,23 +39,26 @@ section > h1 {
 
 .mastery,
 .labels {
-  transition: all 1s 0.2s linear;
+  transition: all 1.5s 0.5s linear;
 }
 
-.containers95 .mastery, .containers95 .labels {
+.containers95 .mastery,
+.containers95 .labels {
   width: 95%;
 }
 
-.containers90 .mastery, .containers90 .labels {
+.containers90 .mastery,
+.containers90 .labels {
   width: 90%;
 }
 
-.containers85 .mastery, .containers85 .labels {
+.containers85 .mastery,
+.containers85 .labels {
   width: 85%;
 }
 
-
-.containers80 .mastery, .containers80 .labels {
+.containers80 .mastery,
+.containers80 .labels {
   width: 80%;
 }
 
@@ -73,13 +76,13 @@ section > h1 {
 .project:hover .projectImg {
   z-index: -1;
   opacity: 0;
-  transition: all 0.3s 0.9s linear;
+  transition: all 0.3s 0.8s linear;
 }
 
 .project:hover .description {
   opacity: 1;
   z-index: 1;
-  transition: opacity 0.3s 0.9s linear;
+  transition: opacity 0.3s 0.8s linear;
 }
 
 /* EXPERIENCE SECTION */
