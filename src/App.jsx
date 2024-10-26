@@ -1,4 +1,5 @@
 import "./App.css";
+import aboutmeprofile from "./assets/aboutmeProfile.jpg";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -625,7 +626,7 @@ function App() {
             <h1 className="text-4xl font-semibold mb-12">ABOUT ME</h1>
             <div className="flex flex-col items-center justify-center gap-y-7 sm:gap-y-16 text-2xl">
               <motion.img
-                src="./src/assets/aboutmeProfile.jpg"
+                src={aboutmeprofile}
                 alt="About me profile"
                 ref={aboutProfile}
                 initial={{ opacity: 0, y: 100 }}
