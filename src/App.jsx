@@ -552,8 +552,8 @@ function App() {
                   <div className="mt-9 lg:mt-12 hover:translate-y-[-2.5px] ">
                     <a
                       href={villaruelResume}
-                      title="Villaruel_CV"
-                      download={"Villaruel_CV"}
+                      title="Villaruel_resume"
+                      download={"Villaruel_resume"}
                       className="text-white text-[15px] lg:text-2xl p-5 rounded-2xl shadow-xl bg-lime-700 hover:bg-[#375010] z-20"
                     >
                       Download CV
