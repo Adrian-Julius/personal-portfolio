@@ -613,14 +613,14 @@ function App() {
           {/* SKILLS/SERVICES SECTION */}
           <section
             ref={SkillsServices}
-            className="pt-7 lg:pt-[15vh] px-7 sm:px-16 mb-16 lg:mb-12"
+            className="pt-7 lg:pt-[15vh] px-6 sm:px-16 mb-16 lg:mb-12"
           >
             <div className="inline-block bg-slate-700 p-1 m-auto mb-5 sm:mb-10 rounded-full">
               <button
                 onClick={() => settingBtnActive("skills")}
                 className={`${
                   btnActive == "skills" ? "bg-orange-700 duration-700" : ""
-                } text-3xl text-center font-semibold px-5 py-1 rounded-full`}
+                } text-xl sm:text-3xl text-center font-semibold px-5 py-1 rounded-full`}
               >
                 SKILLS
               </button>
@@ -628,7 +628,7 @@ function App() {
                 onClick={() => settingBtnActive("services")}
                 className={`${
                   btnActive == "services" ? "bg-orange-700 duration-700" : ""
-                } text-3xl text-center font-semibold px-5 py-1 rounded-full`}
+                } text-xl sm:text-3xl text-center font-semibold px-5 py-1 rounded-full`}
               >
                 SERVICES
               </button>
@@ -637,7 +637,7 @@ function App() {
             <div
               className={`${
                 btnActive == "services"
-                  ? "grid grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-3 duration-700"
+                  ? "grid sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-3 duration-700"
                   : "hidden"
               } `}
             >
@@ -1008,7 +1008,7 @@ function App() {
           {/* PROJECTS SECTION */}
           <section
             ref={projects}
-            className="min-h-[90vh] pt-7 lg:pt-[15vh] px-8 sm:px-24 md:px-16 mb-16 lg:mb-8 "
+            className="min-h-[90vh] pt-7 lg:pt-[15vh] px-6 sm:px-24 md:px-16 mb-16 lg:mb-8 "
           >
             <h1 className="text-4xl font-semibold mb-12">PROJECTS</h1>
             <div className="projectContainer flex flex-col md:grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-x-2 lg:gap-y-4  justify-center">
@@ -1019,7 +1019,7 @@ function App() {
           {/* EXPERIENCE SECTION */}
           <section
             ref={experience}
-            className="pt-7 lg:pt-[15vh] px-7 sm:px-16 mb-20 lg:mb-8 "
+            className="pt-7 lg:pt-[15vh] px-6 sm:px-16 mb-20 lg:mb-8 "
           >
             <h1 className="text-4xl mb-20 font-semibold xl:mb-12">
               EXPERIENCE / JOURNEY
@@ -1028,9 +1028,9 @@ function App() {
             <div className="timelineContainer relative text-slate-700">
               <div className="timeline hidden xl:block left-[50%] top-[12%] translate-x-[-50%] absolute w-1 h-3/4 bg-green-600"></div>
 
-              <div className="experienceContainer relative flex flex-col justify-center items-center gap-y-6">
+              <div className="experienceContainer relative flex flex-col justify-center items-center gap-y-2">
                 <div className="leftContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[-51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
-                  <div className="absolute top-[-20%] right-[44%]  xl:top-[35%] xl:right-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
+                  <div className="absolute top-[-17%] sm:top-[-20%] right-[42%] sm:right-[44%]  xl:top-[35%] xl:right-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
                     <FaUserGraduate size={"40px"} color="orange" />
                   </div>
 
@@ -1050,7 +1050,7 @@ function App() {
                 </div>
 
                 <div className="rightContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
-                  <div className="absolute top-[-20%] right-[44%] xl:top-[30%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
+                  <div className="absolute top-[-16%] sm:top-[-20%] right-[42%] sm:right-[44%]  xl:top-[30%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
                     <FaCode size={"40px"} color="orange" />
                   </div>
 
@@ -1070,7 +1070,7 @@ function App() {
                 </div>
 
                 <div className="leftContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[-51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
-                  <div className="absolute top-[-20%] right-[44%] xl:top-[35%] xl:right-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
+                  <div className="absolute top-[-17%] sm:top-[-20%] right-[42%] sm:right-[44%]  xl:top-[35%] xl:right-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
                     <FaSchool size={"40px"} color="orange" />
                   </div>
 
@@ -1089,7 +1089,7 @@ function App() {
                 </div>
 
                 <div className="rightContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
-                  <div className="absolute top-[-20%] right-[44%] xl:top-[35%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
+                  <div className="absolute top-[-17%] sm:top-[-20%] right-[42%] sm:right-[44%] xl:top-[35%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
                     <FaBook size={"40px"} color="orange" />
                   </div>
                   <div className="content">
@@ -1112,7 +1112,7 @@ function App() {
           {/* CONTACT SECTION */}
           <section
             ref={contact}
-            className="pt-7 lg:pt-[15vh] px-8 sm:px-16 mb-16 lg:mb-8 "
+            className="pt-7 lg:pt-[15vh] px-6 sm:px-16 mb-16 lg:mb-8 "
           >
             <h1 className="text-4xl font-semibold mb-12">CONTACT ME</h1>
             <div className="contactText grid grid-cols-1 lg:grid-cols-2 gap-12">
