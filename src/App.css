@@ -94,6 +94,10 @@ section > h1 {
 } */
 
 
+/* FOOTER */
+.copyright {
+  border-top: 2px solid #ea580c;
+}
 
 @media screen and (max-width: 425px) {
   section {

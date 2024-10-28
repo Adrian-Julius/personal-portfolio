@@ -49,7 +49,7 @@ import {
 function App() {
   const home = useRef();
   const aboutme = useRef();
-  const skills = useRef();
+  const SkillsServices = useRef();
   const projects = useRef();
   const experience = useRef();
   const contact = useRef();
@@ -70,7 +70,7 @@ function App() {
   const menu = [
     { sectionName: "Home", ref: home },
     { sectionName: "About Me", ref: aboutme },
-    { sectionName: "Skills", ref: skills },
+    { sectionName: "Expertise", ref: SkillsServices },
     { sectionName: "Projects", ref: projects },
     { sectionName: "Experience", ref: experience },
     { sectionName: "Contact", ref: contact },
@@ -193,13 +193,13 @@ function App() {
   };
 
   // SKILLS -----------------------------
-// const skillsInfo =[
-//   {}, {}, {}, {}
-// ]
+  const [btnActive, setBtnActive] = useState("skills");
 
+  function settingBtnActive(picked) {
+    setBtnActive(picked);
+  }
 
-
-  // Projects -----------------------------
+  // PROJECTS -----------------------------
   const projectsInfo = [
     {
       id: 1,
@@ -244,7 +244,7 @@ function App() {
     },
     {
       id: 6,
-      name: "Number Guessing game",
+      name: "Number Guessing Game",
       image: guessNumber,
       url: "https://adrian-julius.github.io/Guess-The-Number/",
       description:
@@ -421,7 +421,7 @@ function App() {
             stiffness: 100,
             damping: 8,
           }}
-          className=" text-[1.8em] md:text-[2.6em] xl:text-[3.5em] absolute z-30 text-yellow-400 font-semibold"
+          className=" text-[1.9em] md:text-[2.6em] xl:text-[3.5em] absolute z-30 text-yellow-400 font-semibold"
         >
           𝓨𝓸𝓾𝓻 𝓕𝓻𝓸𝓷𝓽𝓮𝓷𝓭 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓻
         </motion.samp>
@@ -442,7 +442,7 @@ function App() {
               className="w-10 bg-red-200 rounded-full hover:bg-yellow-700 hover:translate-y-[-3px] duration-200"
             />
           ) : (
-            <FaHamburger size={"2em"} />
+            <FaHamburger size={"2.5em"} color="orange" />
           )}
         </button>
         <nav
@@ -610,19 +610,92 @@ function App() {
             </div>
           </section>
 
-          {/* SKILLS SECTION */}
+          {/* SKILLS/SERVICES SECTION */}
           <section
-            ref={skills}
-            className="pt-7 lg:pt-[15vh] px-7 sm:px-16 mb-16 lg:mb-8  "
+            ref={SkillsServices}
+            className="pt-7 lg:pt-[15vh] px-7 sm:px-16 mb-16 lg:mb-12"
           >
-            <h1 className=" text-4xl font-semibold mb-9">TECHNICAL SKILLS</h1>
+            <div className="inline-block bg-slate-700 p-1 m-auto mb-5 sm:mb-10 rounded-full">
+              <button
+                onClick={() => settingBtnActive("skills")}
+                className={`${
+                  btnActive == "skills" ? "bg-orange-700 duration-700" : ""
+                } text-3xl text-center font-semibold px-5 py-1 rounded-full`}
+              >
+                SKILLS
+              </button>
+              <button
+                onClick={() => settingBtnActive("services")}
+                className={`${
+                  btnActive == "services" ? "bg-orange-700 duration-700" : ""
+                } text-3xl text-center font-semibold px-5 py-1 rounded-full`}
+              >
+                SERVICES
+              </button>
+            </div>
+
+            <div
+              className={`${
+                btnActive == "services"
+                  ? "grid grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-3 duration-700"
+                  : "hidden"
+              } `}
+            >
+              <div className=" bg-slate-500  pb-8 px-7 rounded-lg">
+                <h1 className="text-orange-100 underline underline-offset-8 text-[15px] sm:text-lg lg:text-2xl font-semibold p-3  ">
+                  Frontend Development
+                </h1>
+                <div className="sm:text-[15px] ">
+                  Creating visually appealing, responsive websites with clean
+                  code to deliver seamless and engaging user experiences.
+                </div>
+              </div>
+
+              <div className=" bg-slate-500 pb-8 px-7 rounded-lg">
+                <h1 className="text-orange-100 underline underline-offset-8 text-[15px] sm:text-lg lg:text-2xl font-semibold p-3  ">
+                  Basic SEO Implementation
+                </h1>
+                <div className="sm:text-[15px] ">
+                  Enhancing website structure and content to improve visibility
+                  in search engine results, including optimizing HTML structure
+                  and metadata for better SEO performance.
+                </div>
+              </div>
+
+              <div className=" bg-slate-500 pb-8 px-7 rounded-lg">
+                <h1 className="text-orange-100 underline underline-offset-8 text-[15px] sm:text-lg lg:text-2xl font-semibold p-3  ">
+                  Version Control Management
+                </h1>
+                <div className="sm:text-[15px] ">
+                  Collaborating and managing code versions effectively using
+                  Git, ensuring smooth workflow and collaboration in team
+                  environments.
+                </div>
+              </div>
+
+              <div className=" bg-slate-500 pb-8 px-7 rounded-lg">
+                <h1 className="text-orange-100 underline underline-offset-8 text-[15px] sm:text-lg lg:text-2xl font-semibold p-3  ">
+                  Basic Debugging and Testing
+                </h1>
+                <div className="sm:text-[15px] ">
+                  Conducting foundational testing and debugging of web
+                  applications using tools like Jest to identify and resolve
+                  issues, ensuring a smoother and more reliable user experience.
+                </div>
+              </div>
+            </div>
+
             <div>
               <motion.div
                 ref={techSkills}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView5 ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.7 }}
-                className="technicalSkills grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-5 md:gap-x-2 text-center lg:px-28"
+                className={`technicalSkills ${
+                  btnActive == "skills"
+                    ? "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-x-2 gap-y-8  text-center lg:px-28 duration-1000"
+                    : "hidden"
+                }  `}
               >
                 {/* HTML5 */}
                 <div
@@ -630,8 +703,12 @@ function App() {
                     isInView5 ? `containers95` : `invisible`
                   } xl:px-5`}
                 >
-                  <img src={html} alt="html" className="w-[75px] md:w-[70px]" />
-                  <h3 className="text-[12px] sm:text-[14px] font-semibold text-left pl-4">
+                  <img
+                    src={html}
+                    alt="css"
+                    className="w-[75px] md:w-[100px] m-auto"
+                  />
+                  <h3 className="text-[12px] sm:text-[14px] font-semibold">
                     HTML5
                   </h3>
                   <div>
@@ -1064,7 +1141,7 @@ function App() {
                     type="text"
                     name="name"
                     placeholder="fullname"
-                    className="w-full rounded-xl p-3 mb-6 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02]"
+                    className="w-full rounded-xl p-3 mb-6 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02] text-slate-700"
                     required
                   />
                   <br />
@@ -1075,7 +1152,7 @@ function App() {
                     type="email"
                     name="email"
                     placeholder="example@gmail.com"
-                    className="w-full rounded-xl p-3 mb-6 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02]"
+                    className="w-full rounded-xl p-3 mb-6 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02] text-slate-700"
                     required
                   />
                   <br />
@@ -1085,7 +1162,7 @@ function App() {
                   <textarea
                     name="message"
                     rows={4}
-                    className="w-full rounded-xl p-3 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02]"
+                    className="w-full rounded-xl p-3 mt-2 shadow-lg hover:scale-[1.02] focus:scale-[1.02] text-slate-700"
                     required
                   />
                   <br />
@@ -1104,7 +1181,7 @@ function App() {
         </div>
 
         {/* FOOTER */}
-        <footer className=" flex flex-col xl:justify-center xl:items-center gap-x-10 gap-y-1 p-10 mt-10 bg-slate-950 text-white">
+        <footer className=" flex flex-col xl:justify-center xl:items-center gap-x-10 gap-y-1 p-10 pb-3 mt-10 bg-slate-950 text-white">
           <address className="flex flex-col xl:flex-row gap-x-10 gap-y-3 text-left text-[14px] sm:text-[1.1em] mb-5">
             <div className="flex gap-x-2 ">
               <FaPhoneAlt
@@ -1190,6 +1267,9 @@ function App() {
               />
             </a>
           </div>
+          <h2 className="copyright pt-3 mt-9 text-orange-600">
+            © 2024 Adrian Julius Villaruel. All rights reserved.
+          </h2>
         </footer>
       </div>
     </>
