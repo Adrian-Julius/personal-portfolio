@@ -17,6 +17,7 @@ import javascript from "./assets/javascript.png";
 import mysql from "./assets/mysql.png";
 import npm from "./assets/npm.png";
 import python from "./assets/python.png";
+import pokemon from "./assets/pokemon.png";
 import react from "./assets/react.png";
 import rockPaperScissor from "./assets/rockPaperScissor.webp";
 import sass from "./assets/sass.png";
@@ -217,9 +218,17 @@ function App() {
       description:
         "A simple and user-friendly weather app that provides real-time weather updates for any city. Just input a city name to get accurate weather data, including temperature, humidity, and more.",
     },
-
     {
       id: 3,
+      name: "Pokemon Stats Checker",
+      image: pokemon,
+      url: "https://adrian-julius.github.io/pokemon-stat-checker/",
+      description:
+        "A simple and interactive Pokémon checker that displays stats for any Pokémon. Just enter a Pokémon's name to view its stats like hp, attacks, defense, and speed",
+    },
+
+    {
+      id: 4,
       name: "Basic Calculator",
       image: calculator,
       url: "https://adrian-julius.github.io/Basic-Calculator/",
@@ -227,7 +236,7 @@ function App() {
         "A responsive, simple calculator App that allows users to solve basic mathematical equations such as addition, subtraction, multiplication, and division.",
     },
     {
-      id: 4,
+      id: 5,
       name: "Rock Paper Scissor",
       image: rockPaperScissor,
       url: "https://adrian-julius.github.io/Rock-Paper-Scissors-Game-/",
@@ -235,7 +244,7 @@ function App() {
         "Rock-Paper-Scissors game where users can play against another player or the computer. It has a simple interface and tracks scores for an enjoyable experience.",
     },
     {
-      id: 5,
+      id: 6,
       name: "Temperature Conversion",
       image: tempConversion,
       url: "https://adrian-julius.github.io/Temperature-Conversion/",
@@ -243,7 +252,7 @@ function App() {
         "A Temperature Conversion App that enables users to convert between various temperature scales, including Celsius, Fahrenheit, Kelvin, Rankine, and Réaumur.",
     },
     {
-      id: 6,
+      id: 7,
       name: "Number Guessing Game",
       image: guessNumber,
       url: "https://adrian-julius.github.io/Guess-The-Number/",
@@ -251,7 +260,7 @@ function App() {
         "Number Guessing Game that lets users set their own range. Players guess a random number, receiving hints on whether their guesses are too high or too low.",
     },
     {
-      id: 7,
+      id: 8,
       name: "Dice Roller",
       image: diceRoller,
       url: "https://adrian-julius.github.io/Dice-Roller-Game/",
