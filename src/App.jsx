@@ -1098,7 +1098,7 @@ function App() {
                 </div>
 
                 <div className="rightContainer relative w-full sm:w-[560px] sm:h-[200px] xl:translate-x-[51%] px-10 py-12 md:py-9 bg-slate-300 shadow-2xl rounded-[30px] sm:rounded-full">
-                  <div className="absolute top-[-17%] sm:top-[-20%] right-[42%] sm:right-[44%] xl:top-[35%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
+                  <div className="absolute top-[-16%] sm:top-[-20%] right-[42%] sm:right-[44%]  xl:top-[30%] xl:left-[-7%] w-[65px] h-[65px] p-2 rounded-[50%] bg-green-600 z-30 grid place-items-center">
                     <FaBook size={"40px"} color="orange" />
                   </div>
                   <div className="content">
