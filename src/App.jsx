@@ -11,9 +11,9 @@ import git from "./assets/git.png";
 import guessNumber from "./assets/guessNumber.png";
 import homeProfilee from "./assets/homeProfile.png";
 import html from "./assets/html.png";
-
 import java from "./assets/java.png";
 import javascript from "./assets/javascript.png";
+import jquery from "./assets/jquery.png";
 import mysql from "./assets/mysql.png";
 import npm from "./assets/npm.png";
 import python from "./assets/python.png";
@@ -22,11 +22,12 @@ import react from "./assets/react.png";
 import rockPaperScissor from "./assets/rockPaperScissor.webp";
 import sass from "./assets/sass.png";
 import tailwind from "./assets/tailwind.png";
+import taskManager from "./assets/taskManager.png"
 import tempConversion from "./assets/tempConversion.webp";
+import typescript from "./assets/typescript.png";
 import vite from "./assets/vite.png";
 import vscode from "./assets/vscode.png";
 import weatherApp from "./assets/weatherApp.webp";
-
 import villaruelResume from "./assets/VILLARUEL_resume.pdf";
 
 import { useEffect, useRef, useState } from "react";
@@ -212,6 +213,14 @@ function App() {
     },
     {
       id: 2,
+      name: "Task Manager",
+      image: taskManager,
+      url: "https://adrian-julius.github.io/task-manager-app/",
+      description:
+        "A task manager app that allows users to add, remove, and organize tasks into three categories: To Do, Doing, and Done. It also includes a due date feature to help track deadlines and keep tasks on schedule with a simple, intuitive interface.",
+    },
+    {
+      id: 3,
       name: "Weather App",
       image: weatherApp,
       url: "https://adrian-julius.github.io/Weather-App/",
@@ -219,7 +228,7 @@ function App() {
         "A simple and user-friendly weather app that provides real-time weather updates for any city. Just input a city name to get accurate weather data, including temperature, humidity, and more.",
     },
     {
-      id: 3,
+      id: 4,
       name: "Pokemon Stats Checker",
       image: pokemon,
       url: "https://adrian-julius.github.io/pokemon-stat-checker/",
@@ -228,7 +237,7 @@ function App() {
     },
 
     {
-      id: 4,
+      id: 5,
       name: "Basic Calculator",
       image: calculator,
       url: "https://adrian-julius.github.io/Basic-Calculator/",
@@ -236,7 +245,7 @@ function App() {
         "A responsive, simple calculator App that allows users to solve basic mathematical equations such as addition, subtraction, multiplication, and division.",
     },
     {
-      id: 5,
+      id: 6,
       name: "Rock Paper Scissor",
       image: rockPaperScissor,
       url: "https://adrian-julius.github.io/Rock-Paper-Scissors-Game-/",
@@ -244,7 +253,7 @@ function App() {
         "Rock-Paper-Scissors game where users can play against another player or the computer. It has a simple interface and tracks scores for an enjoyable experience.",
     },
     {
-      id: 6,
+      id: 7,
       name: "Temperature Conversion",
       image: tempConversion,
       url: "https://adrian-julius.github.io/Temperature-Conversion/",
@@ -252,7 +261,7 @@ function App() {
         "A Temperature Conversion App that enables users to convert between various temperature scales, including Celsius, Fahrenheit, Kelvin, Rankine, and Réaumur.",
     },
     {
-      id: 7,
+      id: 8,
       name: "Number Guessing Game",
       image: guessNumber,
       url: "https://adrian-julius.github.io/Guess-The-Number/",
@@ -260,7 +269,7 @@ function App() {
         "Number Guessing Game that lets users set their own range. Players guess a random number, receiving hints on whether their guesses are too high or too low.",
     },
     {
-      id: 8,
+      id: 9,
       name: "Dice Roller",
       image: diceRoller,
       url: "https://adrian-julius.github.io/Dice-Roller-Game/",
@@ -779,6 +788,31 @@ function App() {
                   </div>
                 </div>
 
+                {/* Typescript */}
+                <div
+                  className={`${
+                    isInView5 ? `containers90` : `invisible`
+                  } xl:px-5`}
+                >
+                  <img
+                    src={typescript}
+                    alt="typescript"
+                    className="w-[75px] md:w-[100px] m-auto"
+                  />
+                  <h3 className="text-[12px] sm:text-[13px] font-semibold">
+                    TypeScript
+                  </h3>
+
+                  <div>
+                    <label className="labels block w-[0] text-[10px] sm:text-[14px] text-right">
+                      90%
+                    </label>
+                    <div className="skills w-full h-[8.5px] bg-slate-600 rounded-full">
+                      <div className="mastery w-[0] h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full text-[9.5px] md:text-[9px] text-white text-right pr-2 font-semibold"></div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* React */}
                 <div
                   className={`${
@@ -852,6 +886,31 @@ function App() {
                   <div>
                     <label className="labels block w-[0] text-[10px] sm:text-[13px]  text-right">
                       90%
+                    </label>
+                    <div className="skills w-full h-[8.5px] bg-slate-600 rounded-full">
+                      <div className="mastery w-[0] h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full text-[9.5px] md:text-[9px] text-white text-right pr-2 font-semibold"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* jQuery */}
+                <div
+                  className={`${
+                    isInView5 ? `containers85` : `invisible`
+                  } xl:px-5`}
+                >
+                  <img
+                    src={jquery}
+                    alt="jquery"
+                    className="w-[75px] md:w-[100px] m-auto"
+                  />
+                  <h3 className="text-[12px] sm:text-[14px] font-semibold">
+                    jQuery
+                  </h3>
+
+                  <div>
+                    <label className="labels block w-[0] text-[10px] sm:text-[13px] text-right">
+                      85%
                     </label>
                     <div className="skills w-full h-[8.5px] bg-slate-600 rounded-full">
                       <div className="mastery w-[0] h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full text-[9.5px] md:text-[9px] text-white text-right pr-2 font-semibold"></div>
