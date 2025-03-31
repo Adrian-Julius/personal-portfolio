@@ -1,0 +1,106 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: monospace;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    rgb(254, 255, 249) 0%,
+    rgb(249, 253, 255) 50%,
+    rgb(252, 250, 255) 100%
+  );
+}
+
+section > h1 {
+  text-shadow: 1.5px 1.5px 1px rgb(205, 172, 115);
+}
+
+/* ALL SECTIONS */
+
+/* HOME SECTION */
+.profile {
+  box-shadow: 25px 25px 0px #5a5a5a, -25px -25px 0px #cf6800;
+  border-radius: 63% 37% 84% 16% / 24% 71% 29% 76%;
+}
+
+/* ABOUT SECTION */
+
+/* SKILLS SECTION */
+
+.mastery,
+.labels {
+  transition: all 1.5s 0.5s linear;
+}
+
+.containers95 .mastery,
+.containers95 .labels {
+  width: 95%;
+}
+
+.containers90 .mastery,
+.containers90 .labels {
+  width: 90%;
+}
+
+.containers85 .mastery,
+.containers85 .labels {
+  width: 85%;
+}
+
+.containers80 .mastery,
+.containers80 .labels {
+  width: 80%;
+}
+
+/* PROJECTS SECTION */
+/* .project {
+  border: 2px solid grey;
+} */
+
+.project:hover {
+  display: block;
+  background-image: linear-gradient(to right, #ffffff, #f0ff9d);
+}
+
+.project:hover .projectName {
+  color: #cf4500;
+  transition: all 0.3s linear;
+}
+
+.project:hover .projectImg {
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s 0.1s linear;
+}
+
+.project:hover .description {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.3s 0.2s linear;
+}
+
+/* EXPERIENCE SECTION */
+/* .leftContainer, .rightContainer {
+  border: 2px solid green;
+} */
+
+
+/* FOOTER */
+.copyright {
+  border-top: 2px solid #ea580c;
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    padding-left: 2%;
+  }
+}
